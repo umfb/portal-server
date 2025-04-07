@@ -1,6 +1,6 @@
 const express = require("express");
 const cors = require("cors");
-const cookieParser = require("cookie-parser");
+const cookieparser = require("cookie-parser");
 const userRoute = require("./routers/users.router");
 const roleRoute = require("./routers/role.router");
 const eventRoute = require("./routers/events.router");
@@ -15,7 +15,7 @@ const allowedOrigins = [
   "http://localhost:5000",
 ];
 
-app.use(cookieParser());
+app.use(cookieparser());
 app.use(express.json({}));
 app.use(express.urlencoded({ extended: true }));
 app.use(
